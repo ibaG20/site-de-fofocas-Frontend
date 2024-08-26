@@ -1,0 +1,21 @@
+<div class="form-container">
+  <form class="row g-3 login-component">
+    <label for="labelTittle" class="form-tittle">Login</label>
+    <div class="col-md-6">
+      <label for="inputEmail4" class="form-label">Email</label>
+      <input type="email" placeholder="example@email.com" class="form-control" id="inputEmail4">
+    </div>
+    <div class="col-md-6">
+      <label for="inputPassword4" class="form-label">Password</label>
+      <input type="password" class="form-control" id="inputPassword4">
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Entrar</button>
+    </div>
+
+    <label class="label-criarConta" for="createAccount">
+      <a routerLink="/criar-conta" class="link-criarConta">Criar conta</a>
+    </label>
+  </form>
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,37 @@
+/* Estilização do card */
+.cards {
+    max-width: 800px; /* Limita a largura máxima */
+    margin: auto; /* Centraliza o card na página */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    background-color: rgb(199, 213, 233); /* Cor de fundo do card */
+    color: rgb(43, 88, 146);
+}
+
+.card-tittle {
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    padding: 0;
+}
+
+/* Centralização do card dentro de um contêiner */
+.card-container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 92vh; /* Ocupa 100% da altura da viewport */
+    width: 100;
+    padding: 20px; /* Espaçamento interno */
+    background-color: rgb(137, 174, 223);
+}
+
+label{
+    margin-top: 10px;
+}
+
+.card-body {
+    color: rgb(43, 88, 146);
+}

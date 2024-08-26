@@ -1,0 +1,13 @@
+nav{
+    height: 8vh;
+    background-color: rgb(43, 88, 146);
+}
+
+a {
+    color: rgb(137, 174, 223) !important;
+}
+
+a:hover{
+    color: rgb(69, 138, 223) !important;
+
+}

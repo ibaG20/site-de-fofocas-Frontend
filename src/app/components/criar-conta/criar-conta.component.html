@@ -1,0 +1,33 @@
+<div class="form-container">
+    <form class="row g-3 login-component">
+      <label for="labelTittle" class="form-tittle">Criar conta</label>
+      <div class="col-md-6 form-item">
+        <label for="inputEmail4" class="form-label">Email</label>
+        <input type="email" placeholder="example@email.com" class="form-control" id="inputEmail4">
+      </div>
+      <div class="col-auto form-item">
+        <label class="form-label" for="inputUserName4">Username</label>
+        <div class="input-group">
+          <div class="input-group-text">&#64;</div>
+          <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Username">
+        </div>
+      </div>
+      <div class="col-md-6 form-item">
+        <label for="inputPassword4" class="form-label">Password</label>
+        <input type="password" class="form-control" id="inputPassword4">
+      </div>
+      <div class="col-md-6 form-item">
+        <label for="inputBio4">Biografia</label>
+        <textarea class="form-control" id="bioInput" rows="3" placeholder="Compartilhe algo sobre você: paixão por tecnologia, hobbies criativos, carreira, ou o que te inspira!"></textarea>
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Sign in</button>
+      </div>
+  
+      <label class="label-criarConta" for="createAccount">
+        <a routerLink="/login" class="link-criarConta">Login</a>
+      </label>
+    
+    </form>
+  </div>
+  <router-outlet></router-outlet>
