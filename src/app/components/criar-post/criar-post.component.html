@@ -1,0 +1,50 @@
+<div class="form-container">
+    <form class="row g-3 login-component">
+        <label for="labelTittle" class="form-tittle">Criar Postagem</label>
+
+        <label for="inputBio4">Coloque uma imagem pra fofoca ficar completa:</label>
+        <div class="input-group">
+            <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04"
+                aria-label="Upload">
+        </div>
+
+        <div class="col-md-6 form-item">
+            <label for="inputBio4">Fofoca</label>
+            <textarea class="form-control" id="bioInput" rows="3"
+                placeholder="Compartilhe as fofocas com a gente!"></textarea>
+        </div>
+
+        <div class="col-md-6 form-item">
+            <label for="inputBio4">Adicionar categoria</label>
+            <input class="form-control" id="bioInput" rows="3"
+                placeholder="adicine uma categoria nova">
+        </div>
+
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                id="dropdownMenuButton" aria-expanded="false">
+                Categorias
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li *ngFor="let category of categories">
+                    <a class="dropdown-item" (click)="toggleCategory(category)">
+                        {{ category }}
+                        <span *ngIf="selectedCategories.has(category)" class="badge bg-primary ms-2">Selecionado</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <label for="">Categorias selecionadas:</label>
+            <div class="card">
+                <div class="card-body">{{ selectedCategoriesList.join(', ') }}</div>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary" routerLink="/feed">Postar</button>
+        </div>
+    </form>
+</div>
+<router-outlet></router-outlet>

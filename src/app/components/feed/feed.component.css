@@ -1,0 +1,67 @@
+/* Fundo do feed */
+.feed-container {
+    background-color: rgb(124, 161, 209); /* Cor de fundo do feed */
+    padding: 20px;
+}
+
+/* Estilização do input de criar post */
+.criar-post {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+}
+
+.input-post {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.post-options {
+    display: flex;
+    gap: 10px;
+}
+
+.card-img, .card-img-bottom, .card-img-top {
+    width: auto;
+}
+
+.btn-option {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-option:hover {
+    background-color: #0056b3;
+}
+
+/* Estilização do container de posts */
+.posts-container {
+    background-color: rgba(199, 213, 233, 0.8); /* Cor clara para o container de posts */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    column-count: 2; /* Distribui os posts em duas colunas */
+    column-gap: 20px; /* Espaçamento entre as colunas */
+}
+
+/* Estilização dos posts individuais */
+.post-item {
+    background-color: #ffffff; /* Fundo branco para as postagens */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Espaço inferior entre os posts */
+    display: inline-block;
+    width: 100% !important; /* Garante que o post ocupe toda a largura da coluna */
+}
+
+.card-body {
+    padding: 15px;
+}

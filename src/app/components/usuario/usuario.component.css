@@ -17,6 +17,14 @@
     padding: 0;
 }
 
+.user-info {
+    display: flex;
+    gap: 20px;
+}
+
+.info-item {
+    flex: 1;
+}
 /* Centralização do card dentro de um contêiner */
 .card-container {
     display: flex;
@@ -34,4 +42,24 @@ label{
 
 .card-body {
     color: rgb(43, 88, 146);
+}
+
+.logout-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.logout-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(43, 88, 146);
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.logout-button:hover {
+    background-color: rgb(32, 78, 138);
 }

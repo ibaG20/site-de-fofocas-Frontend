@@ -1,25 +1,28 @@
 <div class="card-container">
     <div class="cards">
         <label for="" class="card-tittle">Dados do usuário</label>
-        <div>
-            <label for="">Username</label>
-            <div class="card">
-                <div class="card-body">
-                    &#64;username
+        
+        <div class="user-info">
+            <div class="info-item">
+                <label for="">Username</label>
+                <div class="card">
+                    <div class="card-body">
+                        &#64;username
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <label for="">Email</label>
+                <div class="card">
+                    <div class="card-body">
+                        email&#64;email.com
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div>
-            <label for="">Email</label>
-            <div class="card">
-                <div class="card-body">
-                    email&#64;email.com
-                </div>
-            </div>
-        </div>
-
-        <div>
+        <div class="bio-info">
             <label for="">Bio</label>
             <div class="card">
                 <div class="card-body">
@@ -30,13 +33,10 @@
                 </div>
             </div>
         </div>
-        <div>
-            <label for="">Role</label>
-            <div class="card">
-                <div class="card-body">
-                    user
-                </div>
-            </div>
+
+        <div class="logout-container">
+            <button class="logout-button" routerLink="/login">Sair</button>
         </div>
     </div>
 </div>
+<router-outlet></router-outlet>
