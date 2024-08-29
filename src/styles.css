@@ -1,1 +1,42 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    /*     --primary-color: #2b5892;
+    --secondary-color: rgb(124, 161, 209);
+    --third-color: rgb(199, 213, 233); */
+    /* ------------------------------------------------------ */
+    --primary-color: #0f7d7e;
+    /*--secondary-color: #82a398;*/
+     --secondary-color: #76b5a0; 
+    --third-color: #bae4d6;
+
+    --diferent-color-1: #582097;
+    --diferent-color-2: #ddd1eb;
+    --diferent-color-hover-1: #350c64;
+    --diferent-color-hover-2: #c4aedd;
+
+    --button-primary-color: var(--diferent-color-1);
+    --button-secondary-color: var(--diferent-color-2);
+    --button-hover-primary-color: var(--diferent-color-hover-1);
+    --button-hover-secondary-color: var(--diferent-color-hover-2);
+
+    /* TEXT */
+    --text-color-1: var(--diferent-color-1);
+    --text-color-2: var(--diferent-color-2);
+
+
+    /* BACKGROUND */
+    --background-color-1: var(--secondary-color);
+    --background-color-2: var(--primary-color);
+    --card-background-color-1: var(--third-color);
+    --card-background-color-2: var(--background-color-1);
+
+
+    /* BUTTON */
+    --button-background-color-1: var(--button-primary-color);
+    --button-color-1: var(--button-secondary-color);
+    --button-background-color-hover-1: var(--button-hover-primary-color);
+    --button-color-hover-1: var(--button-hover-secondary-color);
+
+    --button-background-color-2: var(--secondary-color);
+    --button-color-2: var(--primary-color);
+
+}

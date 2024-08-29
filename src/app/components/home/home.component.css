@@ -6,7 +6,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(124, 161, 209); /* Fundo branco */
+    background-color: var(--background-color-1); /* Fundo branco */
 }
 
 .welcome-message {
@@ -14,8 +14,8 @@
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    background-color: rgb(199, 213, 233);
-    color: rgb(43, 88, 146);
+    background-color: var(--card-background-color-1);
+    color: var(--text-color-1);
 }
 
 h1 {
@@ -25,5 +25,5 @@ h1 {
 
 p {
     font-size: 18px;
-    color: rgb(43, 88, 146);
+    color: var(--text-color-1);
 }

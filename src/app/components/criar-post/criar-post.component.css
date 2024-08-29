@@ -5,7 +5,7 @@
     align-items: center; /* Centraliza verticalmente */
     height: 100vh; /* Ocupa 100% da altura da viewport */
     padding: 20px; /* Espaçamento interno */
-    background-color: rgb(43, 88, 146);
+    background-color: var(--background-color-2);
 }
 
 .form-tittle{
@@ -26,8 +26,8 @@
     padding: 20px; /* Espaçamento interno */
     border-radius: 10px; /* Bordas arredondadas */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    background-color: rgb(137, 174, 223); /* Cor de fundo do formulário */
-    color: rgb(43, 88, 146);
+    background-color: var(--card-background-color-2); /* Cor de fundo do formulário */
+    color: var(--text-color-1);
 }
 
 .form-item {
@@ -37,21 +37,25 @@
 /* CSS adicional para o botão */
 .btn-primary {
     width: 100%; /* Ocupa toda a largura da coluna */
-    background-color: rgb(43, 88, 146);
-    border-color: rgb(43, 88, 146);
+    background-color: var(--button-background-color-1);
+    border-color: var(--button-background-color-1);
 }
 
-.link-criarConta {
-    display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    text-decoration: underline; /* Adiciona o sublinhado */
-    text-decoration-thickness: 1px; /* Define a espessura do sublinhado */
-    text-underline-offset: 2px; /* Define a distância entre o texto e o sublinhado */
-    color: inherit; /* Herda a cor do texto do elemento pai */
-    cursor: pointer; /* Altera o cursor para o pointer */
+.btn-primary:hover{
+    background-color: var(--button-background-color-hover-1);
+    border-color: var(--button-background-color-hover-1);
 }
 
-.link-criarConta:hover {
-    border-bottom-color: rgb(66, 103, 153); /* Altera a cor do sublinhado ao passar o mouse */
-    color: rgb(66, 103, 153); /* Altera a cor do texto ao passar o mouse */
+.dropdown-color{
+    background-color: var(--button-background-color-1);
+    border-color: var(--button-background-color-1);
+}
+.dropdown-color:hover{
+    background-color: var(--button-background-color-hover-1);
+    border-color: var(--button-background-color-hover-1);
+}
+
+.dropdown-color:active{
+    background-color: var(--button-background-color-hover-1);
+    border-color: var(--button-background-color-hover-1);
 }

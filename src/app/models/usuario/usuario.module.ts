@@ -16,6 +16,7 @@ export class UsuarioModule {
   nome: string = '';
   bio: string = '';
   role: Role = Role.User; 
+  senha: string = '';
   postagens: PostagemModule = new PostagemModule();
   comentarios: ComentarioModule = new ComentarioModule();
 }

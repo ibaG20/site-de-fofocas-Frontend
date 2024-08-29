@@ -1,13 +1,19 @@
 nav{
     height: 8vh;
-    background-color: #2b5892;
+    background-color: var(--background-color-2);
+}
+
+.navbar-brand{
+    font-weight: 700;
+
 }
 
 a {
-    color: rgb(137, 174, 223) !important;
+    color: var(--text-color-2) !important;
+    font-weight: 500;
 }
 
 a:hover{
-    color: rgb(69, 138, 223) !important;
+    color: var(--button-color-hover-1) !important;
 
 }
