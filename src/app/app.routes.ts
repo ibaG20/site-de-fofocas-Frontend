@@ -5,15 +5,18 @@ import { LoginComponent } from './components/login/login.component';
 import { CriarContaComponent } from './components/criar-conta/criar-conta.component';
 import { FeedComponent } from './components/feed/feed.component';
 import { CriarPostComponent } from './components/criar-post/criar-post.component';
+import { AuthGuard } from './services/auth/auth.guard';
 
 export const routes: Routes = [
     {
         path: '',
-        component: HomeComponent
+        component: HomeComponent,
+        canActivate: [AuthGuard]
     },
     {
         path: 'perfil',
-        component: UsuarioComponent
+        component: UsuarioComponent,
+        canActivate: [AuthGuard]
     },
     {
         path: 'login',
@@ -25,10 +28,12 @@ export const routes: Routes = [
     },
     {
         path: 'feed',
-        component: FeedComponent
+        component: FeedComponent,
+        canActivate: [AuthGuard]
     },
     {
         path: 'criar-post',
-        component: CriarPostComponent
+        component: CriarPostComponent,
+        canActivate: [AuthGuard]
     }
 ];

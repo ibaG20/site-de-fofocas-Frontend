@@ -17,8 +17,10 @@ export class UsuarioModule {
   bio: string = '';
   role: Role = Role.User; 
   senha: string = '';
-  postagens: PostagemModule = new PostagemModule();
-  comentarios: ComentarioModule = new ComentarioModule();
+  postagens: PostagemModule[] = []; // Usar um array em vez de instanciar diretamente
+  comentarios: ComentarioModule[] = []; // Usar um array
+  /* postagens: PostagemModule = new PostagemModule();
+  comentarios: ComentarioModule = new ComentarioModule(); */
 }
 export enum Role {
   Admin = 'admin',

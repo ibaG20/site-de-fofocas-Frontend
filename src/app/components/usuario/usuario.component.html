@@ -7,7 +7,7 @@
                 <label for="">Username</label>
                 <div class="card">
                     <div class="card-body">
-                        &#64;username
+                        &#64;{{user.nome}}
                     </div>
                 </div>
             </div>
@@ -16,7 +16,7 @@
                 <label for="">Email</label>
                 <div class="card">
                     <div class="card-body">
-                        email&#64;email.com
+                        {{user.email}}
                     </div>
                 </div>
             </div>
@@ -26,16 +26,13 @@
             <label for="">Bio</label>
             <div class="card">
                 <div class="card-body">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque amet tenetur vitae accusantium
-                    eveniet
-                    incidunt non magni. Ad non quidem autem error accusamus dolores, voluptates perspiciatis quas qui,
-                    consequatur dolor?
+                    {{user.bio}}
                 </div>
             </div>
         </div>
 
         <div class="logout-container">
-            <button class="logout-button" routerLink="/login">Sair</button>
+            <button class="logout-button" routerLink="/login" (click)="onLogout()">Sair</button>
         </div>
     </div>
 </div>
