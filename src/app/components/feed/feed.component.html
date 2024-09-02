@@ -4,74 +4,15 @@
     </div>
 
     <div class="posts-container">
-        <div class="card post-item">
+        <div class="card post-item" *ngFor="let postagem of postagens">
             <div class="card-body">
-                <h5 class="card-title">Postagem 1</h5>
-                <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <h6 class="card-subtitle mb-2 text-body-secondary">{{postagem.autor}}</h6>
+                <h5 class="card-title">{{postagem.titulo}}</h5>
+                <p class="card-text">{{postagem.conteudo}}</p>
             </div>
         </div>
 
-        <div class="card post-item" style="width: 18rem;">
-            <div class="card-body">
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQMAAADCCAMAAAB6zFdcAAABv1BMVEX//////v////38///WF+X///z//v63C/K3CvS5AO//AwvuIdj//P+0APX/AhHADO2hAfzNFefjsfCWAPjoQdD/AADXAOSXAf7/Bz3Ocuz0HLn/BTHLmPL/BC7/+f/Sd+zqk9iMAPz/AxvkqOfYre3yG7znIN7yr+30vMjzAADKAOr/BTf65fbzAJr5GK3/Ayf/B0P/LtW4c+v/8v/gHuOpBPqrT+r1D7XadejXfuC6O9/tasj/EYP5GK/zba38HJLoAAD/Goj4z/H/AHH/LM2FAO3yH8//DWPxAFfshJXwFJP45u/bADLeToTwdqX82vHqcYfzmZv10tvrY3TqRof/BnTrVaP1vuTjRk/vhaL2udTpPpzxq7ftN0XsABrxNaPyodnyqMr+6unwgMrryPPrd3XxbdvnU9D3zsrui7TuneH5jeHtKSn6zuTtQ2X0ScTnK8beQ9nVh+GxLeG/h+qXKePoxPj2Q0T2a9LZXte9XevomOvthYzwdMnoedi+denpImztPbXwnLTugMLysLH+AFOZROfjPNvvWn3xrNqQAOKuM+zdpvPzkMTnGZzUV+rwM4XJNN7sTJHOZu3rYYRoNwazAAAN/UlEQVR4nO2biV8TSRaAq6voBqGRy0QOaRUxCATUaZiAwADhVByjOIgHMshEURQVZbMCgseM4xIyMqzzB++rqu5O5wIiRHdn3/f7CUnIUf31q1fvVUdCEARBEARBEARBEARBEARBEARBEARBEARBEARBEARBEARBEARBEARBEARBEARBEARBEARBkP8tKIN/9h2FMaYo33I43whzLH5bG8v8vL8hcL4pBMDYxcuq8xgjP14J8b99u2F9XcABGb863XjN/dDC6NsfFhSi0syv+zvByPj1xsN1NYbrIYX8NDExcWPy243qq8Hznn7mZmNhXV3hrcQ/3R7o7u7vvTNppH/l3whmTN2FGACmE7Mg0/8EB/29vT/PmN9obLlHoZAJ9WuXPcJAXeHVxD8zdm+CB0JvS8unP/yMajRDZoAlVRVZI9MT9on9rjnKTLOv+zyFh+uEhMZxcTgOjOndE9JBS0vrL6GMbxKaFGwEczJEIFxfX15eHqbq7k/Nmtn7jZ7CwkIZBoevp66D90RGuMQdtPasBUm6E0Hpg/Pnzw8XFQ3P5WCIgqri4oKCgirKdn9qtjzs4wYKD0sHjQ/BQdKnmG9FIPRyB62tgY1078LM4fOSwcyhsj+O5wMFVbmoVR72wfE7Dm7SlPlGyaMBkRUvCQetaR2QjfM28wc/RoFwUJwTB+ONMgyEhMYzhGlyqXThH5jo73ciYTJdMLI5x8ERPTdZERwUFOTGwZjjALLiXciBmqIkt0lXZCD0ipSQNun5n58ftCWkzxj7JocOZmVGFHEAYaBwB/xx5vow/6hcH3lebEmd74yRmfOD0gH8fMxykLa4g4JcOdCm4w4uqyrMBUWsjrPuWunKAKRFmRNa/KnvwcicdDDIea4f/ChJTh3QJ44DzxTVFEbFiSW/uYulhZGJCTkdetM6CA3zg69uEA4GndlCE345o6fyh/iVMu8SX+rieEHcgXyx81rKSz33K3U9O1P/9MhscLjuiaFqCtVAAUh42hwPBEZ+GpiQC2TvJSMl0hVyQhz7M/JM/F63R8Nm1tbW1tf8kGaDj+eePx9envfDo6LKUaHYCXcu+ny+xVX+YKwT6AjTUx38xqm4gxfHOWG3A6bSUGzlZX5xcf7KUliB6CUqiX3HCVPqX/rH0NBQ5IsceC6yuIPxmrop15Nu80CQK2S695DHfoJsiN+nrf5KVV+d5neDqrl+ehgoghrqsSHjgbLQsq9N4G07pZDPXq+3yXuKdJQ1AR1xwduHOOWkysmJlIZWou3tpaWl/EfFZjmce5V8fxQ4WU7qh05yImoWBeVNey70jYEDYs2Fq2drn7pqc/0nORv6+y+lhikLBeBIT58OMv9pIWGSiM9npOs0J2g+H3YomjP4B6hqg6/NJyXk5eWtkg4v5xTpLANcDsiFQyUlJeDAWRcYiRW3O5S2l1Z8x0csHAxFIkNHTx4VDrJYne5bDjyviXQAhSIbe1LTXDvuyj+3RwYgLwJ3SKrfE4HB6urqZ3DQr6o5a0STf7AcdA0OOgqKfHKqlLeBAp+wkAcWgh1eULEnB6AAiEuAUHgDJ0Y4qCiPnpREslmgX1sOGmcZg+pGrAtkqhYcXGXxTGO8HRnhOaH7RqoD4x0oCARO8AQQEBJM5nawHhiMhwFICMMsCX302QqEhcWtvTog4eL2Aq4gunnhZVRaGIpYDo5eOHn0aPYOrgkHhZ77/I7cUyTK3ZqamubKMWaXfAp5P8ojYWLih2QHjAR7qnsCgeoQdOFmgNtweoou8CE0PJuZnGyYGy7iDooewNstSwO+5fJgKNyZ1+blCtI7KEmKgwsiCKKdfIEyjkVLOd8TywHMg6HNN8eWvs9qLvzm4WFQyJtmYq9JC9PcQfN7ZzNAYcaoCARwkLT8a+TXHiDwDIRprCsQgNuvbAcB6WAephhE2bx0UGSSUJEMggaIHVgnwm1CwS4O5LoQjvKZEI3wbAXz9lgFd1BhWg6Onvw9LA8jm9VROvBch+N1Cv3rtVxB5Sh1daqPPoCEgYFHyW2lavBOqqd1Bj5YIzM94KA1IIoIyImBAFfwWKzlkKjXhYKiIHkhDPjm+b6LplIaztuDA9kz+WPHVzajnVSMl1FTOojYcfC7oYpin9Es2paHoneGMHAcsFkZBs21Z1wHPAaBMDIw8ij59WxS9pMhEUP+VhEUM24H1SZ3oMHhhqSDBnJEhMFHojIxYEqWd50LVQWyd+ZDUkwTVgIxXropHNRbDob8VOZjmrUDz02r/hJcrBMOKpv/5T7ptyAQRkbuJQcZWxMO3mk8rCH8eyAoet65HXTxOzzTqOS5dGDKqdBgvwdl4ba9OtB1naqAteFvRBMcrNi7bTSbzo07ONz40PUS/fLZGpETz51zNw1+4eB28uvNFsEMMfgpZRvCiOisuAOeDk5Y1TE4OCIdBH1cQlu8/WKmay407exAUcT5V3k4hMo32xMcHLMb/6x611lonj133Vn0TGGtjINzlQkb7VdAwofbye++Ifca/Vbq8MuZccJ2UM0dMGuSSQe+hrBw4Ivv11Oy7XZQlmZtrLLyAXdAjGB9FWSFKCSDBAcVx76obxcOpngKkRNIIU/P1vJs0FxZWfnBvQiEwMHoQqIDRm6ITupnv4X5Tk4NhdfwXSIlnrBnlOOgoYg7+Ki7uuwt20ETnww7rAs6I6E3+e3uGinu4OSxL1HAtL5CzxMt7oCM99WdBcTSUJsQ+j+mONDIWK/kUosLSAlBfnLtuZDsYENUB1/mQNXf5LurxPYkByxlH2x3tD6PZ4pYWZYPdPyiza1bt9yNE1n4MDIaSki3jN3r741jGwAHf2R2UNTQsIODsmQHybXySr5TKkejv8c29x8HhE57+jRXss+8CcSgcxr1Jy45yg251ZgQDHIyMJbRQUQWyu4rV9t7cJDPHcQsBZtvYpGQmbQ2fpkDBZrnawnRk7qf6HD7w4iZ6CDEt1ttC5dcDloXdnAQklVikDqB4M9UIynuGok7gB/gID/Cx8hr+QNxcLNxds8z6O2IwRKucvzRLR30gwCLTzIh/LLDXDBlt/CCaLbQcq87HzRtWVlHoWZJgoPjfuEgGlKp5CAcUHLzfsYdrRTuvSXu+pko4ops9x3TTZdw8MnIHAdkUayNPr+z0bFlO3ghcmKZKcemktghV30ADsKicV4R1wB4zWEWH0A+YPfHyZ7rSuNH9z2FLIg9he57PKfKMcFRieK5p2WSZHawKgvFZVjoxA7maps9F04JB00v4H2oCstgSUmig4hIB5+t/hYcVRzEXHioatpe44AtJN59JBT0h/iyosgiHU7NJ9FEre3gwPxotc5+Xtr6O+RuEncQLJOs6jwOwi+THYSFg0M6dB+8R/NHD6A+gKKLaimrAstwjSDpUeNPbqD7Dq/OWbxw6GrhjVOrmdmBHQg+32Jn53KbN+5AzxMKmkq2VmOrWyUlJUn5wMwXk6FKbkqG5b7ifueCKK3lMTOmn0nDrGuiaAmvXHgrHMzAyWQubRvSwQbfWkvvgOlzfAtJbCN580BAx7K1j0RW5WRoKinh/0ouVCWtCxfEutC+uVRfv3Sh4kDqRGK1F9LBVKPHw7+LICtF0TZUNl8lGS54sysTwoFf9mrOk0zeOrb2dJFXfGstnQOqmIuuvbS2RdN2oBrb0gH/BxIixxP3kVjkULssEErFhurLz+22g4qKL3fgoJC74uDPyp6JN46cUSPDzDBkGPzbdYVDssYl9ARM6J2lA5bsQCdGJ58LbSIaFv3E3k8kNFgmlkdBySoRcZDv1MqUvoBS2aoTi0uHwkulB+qAjDeedTmotByce8/Sp8zbIxNyVVCkQRs6+UnspGysif2DNA7EtlJo/aMMgnmdOA6oRv1bloGmpnLVcVAlCoMqmI2xqO2gPRomVaJn3u9ciHO10HEg+0Zp4WmGp9/7QeAnSbt3qrkmmJnpWuvq6pq0y0FKHq8/AML8C8B8A8DwB4NBv5iNLgcqCXdsw4zYikEpTGJVwOewGvvMiVGNEf/SyyjQ/jJmEFq/8nllZSVMllY4kf1e752drrMdWAqkhMrxtE+3JgBfEPgGXvzTFVjZ4a6dJZlq3eArsEgcYhPEVZQoCQ7E9pBpwPGJVo5/gVpVRUUJRRP8VRG7J6GQqfDFyNn5FkPa99eVphrr6tI5OPfXDi9i/Cp94lxhUOAoYgdRaFDscalEU3T5uOoauLgle6YI1H98nRX1iqLoUChRXVf4zpn0KA6Zx5W86MrLEo7Orw3xK5FZXmxNZfZ1Y1oHf41ru784G+BI/OWdiw2iVBYnMlgmCkXoopIrViXlC1I5ZvymsOB20Px2gRz4tyoiR0SNFJLFJYS+3D7YNnTF9VFW33TAn707Z2B5rK2Np8TR9+I0qAf7JSPrGotvVfRGRvk2v+ZY5l2V332gVu9Bs9ogP0D0qZo6eYmlsrKm8pYpa5+DHQ0lq1aB5Ft+sCyuwfM42DapVOB28CV7Y/uEb9penD4L9WFlc81fY3ZkZrVdvyuQyZbFhSZZLEsFbXlBew391nHAtY9dn65prnm6QJyLrgc+FH29KF4qgwOvdzFE1K+b/XaAX616+PTylAYrW26+XyWYnHMMeL152/MGSVkTvh28gCG6cwEkd/EYnF+WobD1IqxTWUt85YVwByglVHNu58YBo1D5aAYgU55IBv9FDjg5T8bgwNlT/b/5X2MIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiCIzX8Auoj02hPUoN4AAAAASUVORK5CYII="
-                    class="card-img-top">
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                </div>
-            </div>
-        </div>
 
-        <div class="card post-item">
-            <div class="card-body">
-                <h5 class="card-title">Postagem 2</h5>
-                <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Reiciendis temporibus incidunt, excepturi cum expedita iure error. Dolorem
-                    consequatur maiores sed, eaque eius quam quasi explicabo beatae modi a!
-                    Mollitia, quo.</p>
-            </div>
-        </div>
-
-        <div class="card post-item">
-            <div class="card-body">
-                <h5 class="card-title">Postagem 3</h5>
-                <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Temporibus quasi doloribus ut deserunt animi consequuntur, velit inventore omnis?
-                    Quisquam minus cumque mollitia. Quaerat fugiat alias corporis iste quas! Tempora,
-                    voluptatem..</p>
-            </div>
-        </div>
-
-        <div class="card post-item">
-            <div class="card-body">
-                <h5 class="card-title">Postagem 4</h5>
-                <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic voluptate tenetur
-                    iusto iure laborum, veniam saepe consequuntur repellendus corrupti officia aspernatur sed nam. Ullam
-                    inventore facilis vitae dignissimos soluta.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic voluptate tenetur
-                    iusto iure laborum, veniam saepe consequuntur repellendus corrupti officia aspernatur sed nam. Ullam
-                    inventore facilis vitae dignissimos soluta.</p>
-            </div>
-        </div>
-        <div class="card post-item">
-            <div class="card-body">
-                <h5 class="card-title">Postagem 5</h5>
-                <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
-            </div>
-        </div>
-        <div class="card post-item">
-            <div class="card-body">
-                <h5 class="card-title">Postagem 6</h5>
-                <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic voluptate tenetur
-                    iusto iure laborum, veniam saepe consequuntur repellendus corrupti officia aspernatur sed nam. Ullam
-                    inventore facilis vitae dignissimos soluta.</p>
-            </div>
-        </div>
     </div>
 </div>
 <router-outlet></router-outlet>

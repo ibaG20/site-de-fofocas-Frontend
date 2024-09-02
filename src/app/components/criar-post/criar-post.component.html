@@ -14,7 +14,7 @@
                 placeholder="Compartilhe as fofocas com a gente!"></textarea>
         </div>
 
-        <div class="col-md-6 form-item">
+        <div class="col-md-6 form-item" *ngIf="authService.isAdmin()">
             <label for="inputBio4">Adicionar categoria</label>
             <input class="form-control" id="bioInput" rows="3"
                 placeholder="adicine uma categoria nova">

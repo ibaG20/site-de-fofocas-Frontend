@@ -5,3 +5,4 @@ Passo a passo pra rodar:
 - instalar o angular
 - rodar npm install
 - rodar npm start
+

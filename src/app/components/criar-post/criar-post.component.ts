@@ -1,6 +1,7 @@
 import { NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
+import { AuthService } from '../../services/auth/auth.service';
 
 @Component({
   selector: 'app-criar-post',
@@ -22,22 +23,15 @@ export class CriarPostComponent {
     'Categoria 6'
   ]; // Lista de categorias
 
-  // Retorna no máximo 5 categorias
- /*  get limitedCategories(): string[] {
-    return this.categories.slice(0, 5);
-  } */
+  constructor(public authService: AuthService) {}
 
   toggleCategory(category: string): void {
     if (this.selectedCategories.size < 5){
       this.selectedCategories.add(category);
     }
-    /* if (this.selectedCategories.has(category)) {
-      this.selectedCategories.delete(category); // Remove a categoria se já estiver selecionada
-    } else {
-    } */
   }
 
   get selectedCategoriesList(): string[] {
-    return Array.from(this.selectedCategories); // Converte o Set em array para exibição
+    return Array.from(this.selectedCategories);
   }
 }

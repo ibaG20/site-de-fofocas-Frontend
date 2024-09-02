@@ -44,6 +44,12 @@ export class AuthService {
   getUserRole(): Role{
     return this.mockUser.role;
   }
+  isAdmin(): boolean {
+    return this.getUserRole() === Role.Admin;
+  }
+  isUser(): boolean {
+    return this.getUserRole() === Role.User;
+  }
 
   getUserDetails(): UsuarioModule{
     return this.mockUser;

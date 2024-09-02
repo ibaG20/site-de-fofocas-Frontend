@@ -28,8 +28,8 @@ export const routes: Routes = [
     },
     {
         path: 'feed',
-        component: FeedComponent,
-        canActivate: [AuthGuard]
+        component: FeedComponent/* ,
+        canActivate: [AuthGuard] */
     },
     {
         path: 'criar-post',

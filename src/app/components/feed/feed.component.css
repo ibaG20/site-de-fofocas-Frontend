@@ -2,6 +2,7 @@
 .feed-container {
     background-color: var(--background-color-1); /* Cor de fundo do feed */
     padding: 20px;
+    min-height: 92vh;
 }
 
 /* Estilização do input de criar post */
